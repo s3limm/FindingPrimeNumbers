@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace FindingPrimeNumbers
 {
     public partial class Form1 : Form
@@ -16,11 +17,12 @@ namespace FindingPrimeNumbers
         {
             InitializeComponent();
         }
-
+        
         private void btnCalculate_Click(object sender, EventArgs e)
         {
             int sayi = Convert.ToInt32(txtNumber.Text);
             int sayac;
+           
 
             for (int i = 2; i < sayi; i++)
             {
@@ -35,8 +37,15 @@ namespace FindingPrimeNumbers
                 if (sayac == 0)
                 {
                     lstNumbers.Items.Add(i);
+         
                 }
             }
+
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
 
         }
     }
